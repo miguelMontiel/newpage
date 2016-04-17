@@ -1,0 +1,93 @@
+body 
+{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        background-image: url("wallpaper.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: white;
+        font-weight: 100;
+}
+ 
+h1, h2
+{
+        font-weight: 100;
+        margin: 2%;
+}
+ 
+h1
+{
+        font-size: 45pt;
+}
+
+h2 
+{
+        font-size: 25pt;
+}
+ 
+br 
+{
+        display: block;
+        margin: 0px;
+}
+
+label, p, .googlebar
+{
+        background-color: rgba(0, 0, 0, 0.25);
+        font-size: 15pt;
+        padding: 2px 0px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 2px;
+        display: inline-block;
+
+        transition: background-color .5s;
+        -webkit-transition: background-color .5s;
+        -moz-transition: background-color .5s;
+}
+
+p
+{
+        width: 20%;
+        cursor: pointer;
+}
+
+label
+{
+        width: 10%;
+        cursor: pointer;
+}
+
+.links, .chan, .chanTwo
+{
+        padding-top: 1%;
+}
+
+p:hover, label:hover
+{
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+}
+
+a, a:visited
+{
+        text-decoration: none;
+        color: white;
+        padding: 0px 1px;
+}
+
+.googlebar 
+{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        font-size: 20pt;
+        width: 50%;
+        color: white;
+        text-align: center;
+}
+ 
+.googlebar:focus 
+{
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+}
