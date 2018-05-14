@@ -7,23 +7,21 @@ body
         background-attachment: fixed;
         background-size: 100% 100%;
         color: white;
-        font-weight: 100;
 }
- 
+
 h1, h2
 {
-        font-weight: 100;
-        margin: 2%;
+        margin: 1%;
 }
  
 h1
 {
-        font-size: 45pt;
+        font-size: 50pt;
 }
 
 h2 
 {
-        font-size: 25pt;
+        font-size: 30pt;
 }
  
 br 
@@ -32,62 +30,86 @@ br
         margin: 0px;
 }
 
-label, p, .googlebar
+h1, h2, .googlebar, .dropDown, .dropDownButton
+{
+        font-weight: 100;
+}
+
+.googlebar
 {
         background-color: rgba(0, 0, 0, 0.25);
-        font-size: 15pt;
         padding: 2px 0px;
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 2px;
         display: inline-block;
-
-        transition: background-color .5s;
-        -webkit-transition: background-color .5s;
-        -moz-transition: background-color .5s;
-}
-
-p
-{
-        width: 20%;
-        cursor: pointer;
-}
-
-label
-{
-        width: 10%;
-        cursor: pointer;
-}
-
-.links, .chan, .chanTwo
-{
-        padding-top: 1%;
-}
-
-p:hover, label:hover
-{
-        background-color: rgba(255, 255, 255, 0.5);
-        color: black;
-}
-
-a, a:visited
-{
-        text-decoration: none;
-        color: white;
-        padding: 0px 1px;
-}
-
-.googlebar 
-{
         font-family: 'Roboto', sans-serif;
-        font-weight: 100;
         font-size: 20pt;
-        width: 50%;
-        color: white;
         text-align: center;
+        width: 50%;
+
+        transition: background-color .4s;
+        -webkit-transition: background-color .4s;
+        -moz-transition: background-color .4s;
 }
- 
-.googlebar:focus 
+
+.googlebar:hover
+{
+        background-color: rgba(255, 255, 255, 0.2);
+}
+
+.googlebar:focus
 {
         background-color: rgba(255, 255, 255, 0.5);
         color: black;
+}
+
+.dropDown
+{
+        position: relative;
+        display: inline-block;
+        margin: 1%;
+}
+
+.dropDownButton
+{
+        background-color: #4CAF50;
+        min-width: 320px;
+        min-height: 120px;
+        font-size: 20pt;
+        border: none;
+        cursor: pointer;
+}
+
+.chan, .entertainment, .games, .misc
+{
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 320px;
+        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+}
+
+.chan a, .entertainment a, .games a, .misc a
+{
+        color: black;
+        text-decoration: none;
+        display: block;
+        min-height: 48px;
+        font-size: 20pt;
+
+        transition: all .1s;
+        -webkit-transition: all .1s;
+        -moz-transition: all .1s;
+}
+
+.chan a:hover, .entertainment a:hover, .games a:hover, .misc a:hover
+{
+        background-color: #f1f1f1;
+}
+
+.dropDown:hover .chan, .dropDown:hover .entertainment, .dropDown:hover .games, .dropDown:hover .misc
+{
+        display: block;
+        background-color: #3e8e41;
 }
