@@ -2,6 +2,7 @@
 <html>
     <head>
         <link href = 'https://fonts.googleapis.com/css?family=Roboto:400,100' rel = 'stylesheet' type = 'text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link href = "newpage.css" rel="stylesheet">
         <script src = "newpage.js"></script>
         <title>New Page</title>
@@ -23,22 +24,25 @@
 
         <br>
 
-        <div class = "dropDown">
-            <button class = "dropDownButton">4</button>
-            <div class = "chan">
-                <a href = "http://www.4chan.org/b/">/b/</a>
-                <a href = "http://www.4chan.org/co/">/co/</a>
-                <a href = "http://www.4chan.org/g/">/g/</a>
-                <a href = "http://www.4chan.org/gif/">/gif/</a>
-                <a href = "http://www.4chan.org/h/">/h/</a>
-                <a href = "http://www.4chan.org/ic/">/ic/</a>
-                <a href = "http://www.4chan.org/mlp/">/mlp/</a>
-                <a href = "http://www.4chan.org/v/">/v/</a>
-                <a href = "http://www.4chan.org/vg/">/vg/</a>
-                <a href = "http://www.4chan.org/wg/">/wg/</a>
-                <a href = "http://www.4chan.org/x/">/x/</a>
-            </div>
-        </div>
+        <ul class = "container">
+            <li><a class="parent" href="#">Technology & Science</a>
+                <ul class = "submenu">
+                    <li><a class="tab" href = "http://www.4chan.org/b/">/b/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/co/">/co/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/g/">/g/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/gif/">/gif/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/h/">/h/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/ic/">/ic/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/mlp/">/mlp/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/v/">/v/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/vg/">/vg/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/wg/">/wg/</a></li>
+                    <li><a class="tab" href = "http://www.4chan.org/x/">/x/</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--
 
         <div class = "dropDown">
             <button class = "dropDownButton">Entertainment</button>
@@ -46,10 +50,8 @@
                 <a href = "http://www.youtube.com/">YouTube</a>
                 <a href = "http://www.soundcloud.com/">Soundcloud</a>
                 <a href = "http://www.imgur.com">imgur</a>
-                <!--
                     Twitch
                     Tumblr
-                -->
             </div>
         </div>
 
@@ -57,7 +59,6 @@
             <button class = "dropDownButton">Games</button>
             <div class = "games">
                 <a href = "http://www.humblebundle.com/">HumbleBundle</a>
-                <!--
                     emuparadise
                     Nicoblog
                     3dsiso
@@ -67,7 +68,6 @@
                     CEMU
                     PCSX3
                     PPSSPP
-                -->
             </div>
         </div>
 
@@ -75,13 +75,20 @@
             <button class = "dropDownButton">Misc</button>
             <div class = "misc">
                 <a href = "http://thepiratebay.se/">ThePirateBay</a>
-                <!--
                     Croosade
                     Exh
                     e621
-                -->
             </div>
         </div>
 
+    -->
+        <script>
+$('.submenu').hide();
+$("li:has(ul)").click(function(){
+$("ul",this).slideToggle('200');
+});
+</script>
+
     </body>
+
 </html>
