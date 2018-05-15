@@ -1,8 +1,19 @@
-body 
+@font-face
+{
+        font-family: RobotoThin;
+        src: url("fonts/Roboto-Thin.ttf");
+}
+@font-face
+{
+        font-family: RobotoLight;
+        src: url("fonts/Roboto-Light.ttf");
+}
+
+html 
 {
         text-align: center;
-        font-family: 'Roboto', sans-serif;
-        background-image: url("wallpaper.png");
+        font-family: RobotoThin, sans-serif;
+        background-image: url("images/wallpaper.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
@@ -12,6 +23,7 @@ body
 h1, h2
 {
         margin: 1%;
+        font-weight: 100;
 }
  
 h1
@@ -23,27 +35,17 @@ h2
 {
         font-size: 30pt;
 }
- 
-br 
-{
-        display: block;
-        margin: 0px;
-}
 
-h1, h2, .googlebar, .dropDown, .dropDownButton
-{
-        font-weight: 100;
-}
-
-.googlebar
+input.googlebar
 {
         background-color: rgba(0, 0, 0, 0.25);
         padding: 2px 0px;
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 2px;
         display: inline-block;
-        font-family: 'Roboto', sans-serif;
+        font-family: RobotoLight, sans-serif;
         font-size: 20pt;
+        color: white;
         text-align: center;
         width: 50%;
 
@@ -52,98 +54,85 @@ h1, h2, .googlebar, .dropDown, .dropDownButton
         -moz-transition: background-color .4s;
 }
 
-.googlebar:hover
+input.googlebar:hover
 {
         background-color: rgba(255, 255, 255, 0.2);
 }
 
-.googlebar:focus
+input.googlebar:focus
 {
         background-color: rgba(255, 255, 255, 0.5);
         color: black;
 }
-/*
-.dropDown
-{
-        position: relative;
-        display: inline-block;
-        margin: 1%;
-}
 
-.dropDownButton
-{
-        background-color: #4CAF50;
-        min-width: 320px;
-        min-height: 120px;
-        font-size: 20pt;
-        border: none;
-        cursor: pointer;
-}
-
-.chan, .entertainment, .games, .misc
-{
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 320px;
-        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-}
-
-.chan a, .entertainment a, .games a, .misc a
-{
-        color: black;
-        text-decoration: none;
-        display: block;
-        min-height: 48px;
-        font-size: 20pt;
-
-        transition: all .1s;
-        -webkit-transition: all .1s;
-        -moz-transition: all .1s;
-}
-
-.chan a:hover, .entertainment a:hover, .games a:hover, .misc a:hover
-{
-        background-color: #f1f1f1;
-}
-
-.dropDown:hover .chan, .dropDown:hover .entertainment, .dropDown:hover .games, .dropDown:hover .misc
-{
-        display: block;
-        background-color: #3e8e41;
-}
-*/
-
-::-webkit-scrollbar {display: none;}
 ul
 {
-        display: block;
-        width: 35%;
-        margin: 15% auto;
+        display: inline-block;
+        float: inherit;
+        width: 20%;
+        margin: 1%;
         padding: 0;
         list-style: none;
 }
-ul.container {box-shadow: 0px 0px 0px #000;}
+
+ul.menu 
+{
+        box-shadow: 2px 2px 2px #000;
+}
+
 ul.submenu
 {
         display: block;
         width: 100%;
         margin: 0;
         padding: 0;
-        background:rgba(220,219,219,.07);
+        background: rgba(255, 255, 255, .2);
 }
+
 a
 {
         display: block;
         padding: 10px;
-        color: #EEE;
+        color: white;
         text-decoration: none;
-        transition: all .3s ease;
         opacity: .5;
 }
-a:hover {color: #fff;transition: all .3s ease;}
-a.parent {transition: all .3s ease;color: #555;background: #EEE;text-align: center;}
-a.tab {transition: all .3s ease;opacity: 0.5;}
-a.tab:hover {transition: all .3s ease;text-indent: 5px;opacity: 1; }
-ul > li:hover > a.parent {transition: all .3s ease;opacity: .8;}
+
+a:hover 
+{
+        color: white;
+        background-color: rgba(0, 0, 0, .25);
+}
+
+a.menuTitulo 
+{
+        color: rgba(0, 0, 0, .8);
+        background: white;
+        text-align: left;
+        font-family: RobotoLight, sans-serif;
+        font-weight: bolder;
+        font-size: 25pt;
+        height: 108px;
+
+        transition: all .5s ease;
+}
+
+a.page 
+{
+        font-size: 12pt;
+        opacity: 0.5;
+
+        transition: all .2s ease;
+}
+
+a.page:hover 
+{
+        font-weight: bold;
+        opacity: 1; 
+}
+
+ul > li:hover > a.menuTitulo 
+{
+        
+        opacity: .75;
+}
