@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html>
+    <meta charset = "UTF-8">
+    <link href = 'https://fonts.googleapis.com/css?family=Roboto:400,100' rel = 'stylesheet' type = 'text/css'>
+    
+    <head>
+        <title>New Page</title>
+    </head>
+
+    <body>
+        <h1>
+        	<span id = "hour">...</span> : <span id = "minute">...</span> : <span id = "second">...</span>
+        </h1>
+        <h2>
+        	<span id = "weekDay">...</span>, <span id = "month">...</span> <span id = "monthDay">...</span><span id = "daySyntax">...</span>, <span id = "year">...</span>
+        </h2>
+        
+        <br>
+
+        <form method = "get" action = "http://www.google.com/search">
+			<input type = "text" name = "q" size = "25" class = "googlebar" autocomplete = "off" placeholder = "Google" autofocus>
+		</form>
+
+        <br>
+
+        <ul class = "menu">
+            <li><a class = "menuTitulo">IBM</a>
+                <ul class = "submenu">
+                    <li><a class = "page" href = "https://w3.ibm.com/">w3</a></li>
+                    <li><a class = "page" href = "https://yourlearning.ibm.com/#home/queue">YourLearning</a></li>
+                    <li><a class = "page" href = "https://console.bluemix.net/dashboard/apps/">Bluemix</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class = "menu">
+            <li><a class = "menuTitulo">Banorte</a>
+                <ul class = "submenu">
+                    <li><a class = "page" href = "http://maximo.banorte.com/">Maximo</a></li>
+                    <li><a class = "page" href = "https://cognitiveassistant.in.edst.ibm.com/#/">Cognitive</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class = "menu">
+            <li><a class = "menuTitulo">Misc</a>
+                <ul class = "submenu">
+                    <li><a class = "page" href = "https://drive.google.com/drive/my-drive">Google Drive</a></li>
+                    <li><a class = "page" href = "https://github.com/">Github</a></li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+
+    <footer>Hecho por yo merengues</footer>
+
+    <style type="text/css">
+        html 
+        {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            background-image: url("https://wallpapercave.com/wp/N8JzzcN.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: white;
+        }
+
+        h1, h2
+        {
+            margin: 1%;
+            font-weight: 100;
+        }
+         
+        h1
+        {
+            font-size: 60pt;
+        }
+
+        h2 
+        {
+            font-size: 30pt;
+        }
+
+        input.googlebar
+        {
+            background-color: rgba(0, 0, 0, .25);
+            padding: 2px 0px;
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-radius: 2px;
+            display: inline-block;
+            font-size: 20pt;
+            color: rgba(255, 255, 255, .5);
+            text-align: center;
+            width: 50%;
+
+            transition: all .4s ease-in-out;
+        }
+
+        input.googlebar:hover
+        {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        input.googlebar:focus
+        {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+        }
+
+        ul
+        {
+            display: inline-block;
+            width: 20%;
+            margin: 1%;
+            padding: 0px;
+            list-style: none;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        ul.menu 
+        {
+            box-shadow: 3px 3px 3px black;
+        }
+
+        ul.submenu
+        {
+            display: block;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            background: rgba(255, 255, 255, .2);
+        }
+
+        a
+        {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            opacity: .5;
+            font-weight: 100;
+        }
+
+        a:hover 
+        {
+            background-color: rgba(0, 0, 0, .4);
+        }
+
+        a.menuTitulo 
+        {
+            color: rgba(0, 0, 0, .8);
+            background: white;
+            text-align: left;
+            font-weight: bolder;
+            font-size: 30pt;
+            height: 108px;
+            cursor: default;
+
+            transition: all .5s ease;
+        }
+
+        a.page 
+        {
+            font-size: 20pt;
+            opacity: .8;
+
+            transition: all .2s ease-in-out;
+        }
+
+        a.page:hover 
+        {
+            font-weight: bold;
+            opacity: 1; 
+        }
+
+        ul > li:hover > a.menuTitulo 
+        {
+            opacity: .8;
+        }
+
+        footer
+        {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-weight: 100;
+            font-size: 10pt;
+            background-color: rgba(0, 0, 0, .5);
+            padding: 5px 0px; 
+        }
+    </style>
+
+    <script type="text/javascript">
+        function clock() 
+        {
+            var date = new Date();
+            var weekDay = date.getDay();
+            var month = date.getMonth()+1;
+            var monthDay = date.getDate();
+            var year = date.getFullYear();
+
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            var daySyntax;
+
+            var weekDays = 
+            [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+            ]
+
+            var months = 
+            [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ]
+
+            function makeTimeStampReadable() 
+            {
+                if (minute < 10) 
+                {
+                    minute = "0" + minute;
+                }
+                if (second < 10) 
+                {
+                    second = "0" + second;
+                }
+
+                weekDay = weekDays[weekDay];
+                month = months[month - 1];
+
+                if (monthDay === 1 || monthDay === 21 || monthDay === 31)
+                {
+                    daySyntax = "st";
+                }
+                else if (monthDay === 2 || monthDay === 22)
+                {
+                    daySyntax = "nd";
+                }
+                else if (monthDay === 3 || monthDay === 23)
+                {
+                    daySyntax = "rd";
+                }
+                else 
+                {
+                    daySyntax = "th";
+                }
+            }
+
+            function updateTime() 
+            {
+                document.getElementById("hour").innerHTML = hour;
+                document.getElementById("minute").innerHTML = minute;
+                document.getElementById("second").innerHTML = second;
+
+                document.getElementById("weekDay").innerHTML = weekDay;
+                document.getElementById("month").innerHTML = month;
+                document.getElementById("monthDay").innerHTML = monthDay;
+                document.getElementById("daySyntax").innerHTML = daySyntax;
+                document.getElementById("year").innerHTML = year;
+            }
+
+            makeTimeStampReadable();
+            updateTime();
+        }
+        setInterval(function(){ clock(); }, 1000);
+    </script>
+</html>
